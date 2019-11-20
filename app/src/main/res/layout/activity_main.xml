@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/down"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".activities.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/logo"
+                    tools:layout_conversion_absoluteHeight="56dp"
+                    tools:layout_conversion_absoluteWidth="332dp"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <ImageView
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:src="@drawable/done"
+                    android:tint="#C63C2B"
+                    tools:layout_conversion_absoluteHeight="56dp"
+                    tools:layout_conversion_absoluteWidth="45dp"
+                    tools:layout_editor_absoluteX="367dp"
+                    tools:layout_editor_absoluteY="0dp"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:foregroundGravity="center"
+            android:paddingBottom="10dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#F5D1C9"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Choose EMI Type:"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/emiSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Full EMI"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:thumbTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Pre EMI"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Flat Value: "
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/flatValue"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:ems="10"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="95000000"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Loan Duration (Yrs):"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/loanDuration"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="10"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:inputType="date"
+                            android:text="25"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Rate of Interest(%):"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/roi"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="10"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:inputType="numberDecimal"
+                            android:text="8.75"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal"
+                            android:text="Loan Start Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/loanStartDate"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:ems="10"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal"
+                            android:text="06/10/19"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_horizontal"
+                            android:text="Total Loan Taken"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalLoanAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:text="95000000"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorPrimary"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Test for:"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/testSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Piramal"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:thumbTint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Custom"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/blinkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Weights changed. Press the tick icon to confirm changes."
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            tools:visibility="invisible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/instalmentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Changing EMI Type.\nPlease Wait."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/down"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/helpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:text="Click on any Instalment to view details."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:text="Make sure the Instalment Dates are in ascending order.\nDate for Instalment 11 in Pre EMI is the OC Receipt date."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="Make sure the Instalment Dates are in ascending order.\nDate for Instalment 11 in Pre EMI is the OC Receipt date." />
+
+        <Button
+            android:id="@+id/viewInstalments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/montserrat"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="GENERATE MONTHLY REPORT"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
